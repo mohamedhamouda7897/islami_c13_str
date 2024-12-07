@@ -4,7 +4,7 @@ import 'package:islami_c13_str/onBoarding/onboarding.dart';
 import 'package:islami_c13_str/sura_details/sura_details.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: OnboardingScreen.routeName,
       routes: {
-        SuraDetailsScreen.routeName: (context) => SuraDetailsScreen(),
+        SuraDetailsScreen.routeName: (context) => const SuraDetailsScreen(),
         HomeScreen.routeName: (context) => HomeScreen(),
         OnboardingScreen.routeName: (context) => const OnboardingScreen(),
       },
