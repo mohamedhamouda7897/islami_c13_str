@@ -24,7 +24,11 @@ class SuraDetailsScreen extends StatelessWidget {
       body: Stack(
         alignment: Alignment.topCenter,
         children: [
-          Image.asset("assets/images/details_bg.png"),
+          Image.asset(
+            "assets/images/details_bg.png",
+            width: double.infinity,
+            fit: BoxFit.fill,
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 36),
             child: Column(
@@ -37,35 +41,16 @@ class SuraDetailsScreen extends StatelessWidget {
                   style: GoogleFonts.aBeeZee(
                       fontSize: 24, color: Color(0xFFE2BE7F)),
                 ),
-                SizedBox(
-                  height: 40,
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.red,
-                ),
-                SizedBox(
-                  height: 16,
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.red,
-                ),
-                SizedBox(
-                  height: 16,
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.red,
-                ),
-                SizedBox(
-                  height: 16,
-                ),
               ],
             ),
           ),
         ],
       ),
     );
+  }
+
+
+  readSuraFile(){
+
   }
 }

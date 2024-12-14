@@ -53,8 +53,8 @@ class _QuranTabState extends State<QuranTab> {
           QuranTabModel.searchResultEn.add(data);
         }
       }
-      setState(() {});
     }
+    setState(() {});
   }
 
   Widget _suraNamesHorizontalList() {
