@@ -19,7 +19,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
   Widget build(BuildContext context) {
     var model = ModalRoute.of(context)?.settings.arguments as QuranTabModel;
     if (verses.isEmpty) {
-      readSuraFile(model.index);
+      loadSuraFile(model.index);
     }
     return Scaffold(
       appBar: AppBar(
@@ -106,7 +106,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
     );
   }
 
-  Future<void> readSuraFile(int index) async {
+  Future<void> loadSuraFile(int index) async {
     String file = await rootBundle.loadString("assets/files/$index.txt");
     List<String> lines = file.split("\n");
     print(lines);
