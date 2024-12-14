@@ -106,7 +106,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
     );
   }
 
-  void readSuraFile(int index) async {
+  Future<void> readSuraFile(int index) async {
     String file = await rootBundle.loadString("assets/files/$index.txt");
     List<String> lines = file.split("\n");
     print(lines);
