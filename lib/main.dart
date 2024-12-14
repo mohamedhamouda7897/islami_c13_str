@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: OnboardingScreen.routeName,
       routes: {
-        SuraDetailsScreen.routeName: (context) => const SuraDetailsScreen(),
+        SuraDetailsScreen.routeName: (context) =>  SuraDetailsScreen(),
         HomeScreen.routeName: (context) => HomeScreen(),
         OnboardingScreen.routeName: (context) => const OnboardingScreen(),
       },
