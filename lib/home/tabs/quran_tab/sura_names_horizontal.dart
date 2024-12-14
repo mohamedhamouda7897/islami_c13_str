@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_c13_str/models/quran_tab_model.dart';
+import 'package:islami_c13_str/my_theme_data.dart';
 
 class SuraNamesHorizontal extends StatelessWidget {
   QuranTabModel model;
@@ -18,29 +19,23 @@ class SuraNamesHorizontal extends StatelessWidget {
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text(
-                model.nameEn,
-                style: GoogleFonts.aBeeZee(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                model.nameAr,
-                style: GoogleFonts.aBeeZee(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                "${model.numOfVerses} Verses",
-                style: GoogleFonts.aBeeZee(
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              Text(model.nameEn,
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyMedium!
+                      .copyWith(color: MyThemeData.blackColor)),
+              Text(model.nameAr,
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyMedium!
+                      .copyWith(color: MyThemeData.blackColor)),
+              Text("${model.numOfVerses} Verses",
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyMedium!
+                      .copyWith(color: MyThemeData.blackColor)),
             ],
           ),
           Image.asset("assets/images/sura_item.png")

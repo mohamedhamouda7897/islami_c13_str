@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:islami_c13_str/cache/cache_helper.dart';
 import 'package:islami_c13_str/home/home.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -37,6 +38,7 @@ class OnboardingScreen extends StatelessWidget {
       ),
       globalHeader: Image.asset("assets/images/header2.png"),
       onDone: () {
+        CacheHelper.saveEligibility();
         Navigator.pushReplacementNamed(context, HomeScreen.routeName);
       },
       showSkipButton: true,
@@ -45,6 +47,7 @@ class OnboardingScreen extends StatelessWidget {
         style: GoogleFonts.elMessiri(fontSize: 16, color: primary),
       ),
       onSkip: () {
+        CacheHelper.saveEligibility();
         Navigator.pushReplacementNamed(context, HomeScreen.routeName);
       },
       next: Text(

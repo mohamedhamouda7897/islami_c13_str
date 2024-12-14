@@ -26,7 +26,6 @@ class _HomeScreenState extends State<HomeScreen> {
               image: AssetImage("assets/images/${getBackgroundImage()}.png"),
               fit: BoxFit.cover)),
       child: Scaffold(
-        backgroundColor: Colors.transparent,
         bottomNavigationBar: BottomNavBarItem(
           callBack: (index) {
             currentIndex = index;

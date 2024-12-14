@@ -23,14 +23,10 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
     }
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
         title: Text(
           model.nameEn,
-          style:
-              GoogleFonts.aBeeZee(fontSize: 20, color: const Color(0xFFE2BE7F)),
         ),
         backgroundColor: const Color(0xFF202020),
-        iconTheme: const IconThemeData(color: Color(0xFFE2BE7F)),
       ),
       backgroundColor: const Color(0xFF202020),
       body: Stack(
@@ -49,8 +45,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
                   margin: const EdgeInsets.only(top: 16),
                   child: Text(
                     model.nameAr,
-                    style: GoogleFonts.aBeeZee(
-                        fontSize: 24, color: const Color(0xFFE2BE7F)),
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ),
                 const SizedBox(
@@ -76,18 +71,15 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
                             TextSpan(
                               children: [
                                 TextSpan(
-                                  text: verses[index],
-                                  style: GoogleFonts.aBeeZee(
-                                    fontSize: 24,
-                                    color: const Color(0xFFE2BE7F),
-                                  ),
-                                ),
+                                    text: verses[index],
+                                    style:
+                                        Theme.of(context).textTheme.bodyMedium),
                                 TextSpan(
                                   text: "(${index + 1})",
-                                  style: GoogleFonts.aBeeZee(
-                                    fontSize: 24,
-                                    color: Colors.white,
-                                  ),
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .titleSmall!
+                                      .copyWith(color: Colors.white),
                                 ),
                               ],
                             ),
