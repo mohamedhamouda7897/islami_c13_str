@@ -11,6 +11,8 @@ class SebhaTab extends StatefulWidget {
 class _SebhaTabState extends State<SebhaTab> {
   double turns = 0;
   int num = 0;
+  int counter = 0;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.sizeOf(context);
@@ -62,6 +64,7 @@ class _SebhaTabState extends State<SebhaTab> {
                       if (num > 100) {
                         num = 0;
                       }
+                      changer();
                     },
                     child: Container(
                       decoration: const ShapeDecoration(shape: CircleBorder()),
@@ -83,7 +86,7 @@ class _SebhaTabState extends State<SebhaTab> {
                             height: 24,
                           ),
                           Text(
-                            '$num',
+                            '$counter',
                             style: MyThemeData.lightTheme.textTheme.bodyMedium!
                                 .copyWith(
                               color: Colors.white,
@@ -104,13 +107,17 @@ class _SebhaTabState extends State<SebhaTab> {
   }
 
   String changer() {
-    if (num > 33 && num <= 66) {
+   if (num > 33 && num <= 66) {
+      counter = num - 33;
       return 'الحمد الله';
     } else if (num > 66 && num <= 99) {
+      counter = num - 66;
       return 'الله أكبر';
     } else if (num == 100) {
+      counter = 0;
       return 'لا إله إلا الله وحده لا شريك له له الملك\n وله الحمد وهو على كل شيء قدير';
     }
+    counter = num;
     return 'سبحان الله';
   }
 }
