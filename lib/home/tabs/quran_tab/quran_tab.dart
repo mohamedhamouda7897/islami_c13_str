@@ -6,7 +6,7 @@ import 'package:islami_c13_str/models/quran_tab_model.dart';
 import 'package:islami_c13_str/sura_details/sura_details.dart';
 
 class QuranTab extends StatefulWidget {
-  QuranTab({super.key});
+const  QuranTab({super.key});
 
   @override
   State<QuranTab> createState() => _QuranTabState();
@@ -34,7 +34,7 @@ class _QuranTabState extends State<QuranTab> {
           ),
           QuranTabModel.searchResultEn.isEmpty
               ? _suraNamesHorizontalList()
-              : SizedBox(),
+              : const SizedBox(),
           const SizedBox(
             height: 8,
           ),

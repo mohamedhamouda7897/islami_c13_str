@@ -25,8 +25,8 @@ class MyApp extends StatelessWidget {
           ? HomeScreen.routeName
           : OnboardingScreen.routeName,
       routes: {
-        SuraDetailsScreen.routeName: (context) => SuraDetailsScreen(),
-        HomeScreen.routeName: (context) => HomeScreen(),
+        SuraDetailsScreen.routeName: (context) => const SuraDetailsScreen(),
+        HomeScreen.routeName: (context) => const HomeScreen(),
         OnboardingScreen.routeName: (context) => const OnboardingScreen(),
       },
     );

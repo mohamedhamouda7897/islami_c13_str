@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:islami_c13_str/home/bottom_nav_bar.dart';
 import 'package:islami_c13_str/home/tabs/ahadeth_tab.dart';
 import 'package:islami_c13_str/home/tabs/quran_tab/quran_tab.dart';
-import 'package:islami_c13_str/home/tabs/radio_tab.dart';
-import 'package:islami_c13_str/home/tabs/sebha_tab.dart';
-import 'package:islami_c13_str/home/tabs/time_tab.dart';
+import 'package:islami_c13_str/home/tabs/radio_tab/radio_tab.dart';
+import 'package:islami_c13_str/home/tabs/sebha_tab/sebha_tab.dart';
+import 'package:islami_c13_str/home/tabs/times_tab/time_tab.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "home";
 
-  HomeScreen({super.key});
+ const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -32,22 +32,24 @@ class _HomeScreenState extends State<HomeScreen> {
             setState(() {});
           },
         ),
-        body: Column(
-          children: [
-            Image.asset("assets/images/header2.png"),
-            Expanded(child: tabs[currentIndex]),
-          ],
+        body: SafeArea(
+          child: Column(
+            children: [
+              Image.asset("assets/images/header2.png"),
+              Expanded(child: tabs[currentIndex]),
+            ],
+          ),
         ),
       ),
     );
   }
 
   List<Widget> tabs = [
-    QuranTab(),
-    AhadethTab(),
-    SebhaTab(),
-    RadioTab(),
-    TimeTab(),
+    const QuranTab(),
+    const AhadethTab(),
+    const SebhaTab(),
+    const RadioTab(),
+    const TimeTab(),
   ];
 
   String getBackgroundImage() {

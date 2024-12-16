@@ -12,15 +12,15 @@ class OnboardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var bodyStyle =
-        GoogleFonts.elMessiri(fontSize: 20.0, color: Color(0xFFE2BE7F));
+        GoogleFonts.elMessiri(fontSize: 20.0, color: const Color(0xFFE2BE7F));
 
     const Color primary = Color(0xFFE2BE7F);
     var pageDecoration = PageDecoration(
       titleTextStyle: GoogleFonts.elMessiri(
           fontSize: 24.0, fontWeight: FontWeight.w700, color: primary),
       bodyTextStyle: bodyStyle,
-      bodyPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
-      pageColor: Color(0xFF202020),
+      bodyPadding: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
+      pageColor: const Color(0xFF202020),
       fullScreen: false,
       bodyAlignment: Alignment.center,
       imageAlignment: Alignment.bottomCenter,
@@ -28,10 +28,10 @@ class OnboardingScreen extends StatelessWidget {
       imagePadding: EdgeInsets.zero,
     );
     return IntroductionScreen(
-      globalBackgroundColor: Color(0xFF202020),
+      globalBackgroundColor: const Color(0xFF202020),
       showDoneButton: true,
       dotsFlex: 2,
-      dotsDecorator: DotsDecorator(color: Colors.white, activeColor: primary),
+      dotsDecorator: const DotsDecorator(color: Colors.white, activeColor: primary),
       done: Text(
         "Finish",
         style: GoogleFonts.elMessiri(fontSize: 16, color: primary),
@@ -57,7 +57,7 @@ class OnboardingScreen extends StatelessWidget {
       pages: [
         PageViewModel(
           title: "Welcome To Islmi App",
-          bodyWidget: SizedBox(),
+          bodyWidget: const SizedBox(),
           image: Container(child: Image.asset("assets/images/on1.png")),
           decoration: pageDecoration,
         ),

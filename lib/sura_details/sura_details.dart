@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_c13_str/models/quran_tab_model.dart';
 
 class SuraDetailsScreen extends StatefulWidget {
   static const String routeName = "SuraDetails";
 
-  SuraDetailsScreen({super.key});
+ const SuraDetailsScreen({super.key});
 
   @override
   State<SuraDetailsScreen> createState() => _SuraDetailsScreenState();

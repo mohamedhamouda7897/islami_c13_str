@@ -3,9 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_c13_str/models/quran_tab_model.dart';
 
 class SuraNameItem extends StatelessWidget {
-  QuranTabModel model;
+  final QuranTabModel model;
 
-  SuraNameItem({required this.model, super.key});
+  const SuraNameItem({required this.model, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class SuraNameItem extends StatelessWidget {
           children: [
             Image.asset("assets/images/sura_number.png"),
             Container(
-              padding: EdgeInsets.only(top: 4),
+              padding: const EdgeInsets.only(top: 4),
               child: Text(
                 model.index.toString(),
                 style: GoogleFonts.elMessiri(
@@ -27,7 +27,7 @@ class SuraNameItem extends StatelessWidget {
             )
           ],
         ),
-        SizedBox(
+        const SizedBox(
           width: 8,
         ),
         Column(

@@ -6,10 +6,11 @@ class MyThemeData {
   static const Color blackColor = Color(0xFF202020);
   static ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: Colors.transparent,
+    
     appBarTheme: AppBarTheme(
       centerTitle: true,
       titleTextStyle: GoogleFonts.aBeeZee(fontSize: 20, color: primaryColor),
-      iconTheme: IconThemeData(
+      iconTheme: const IconThemeData(
         color: primaryColor,
       ),
     ),
