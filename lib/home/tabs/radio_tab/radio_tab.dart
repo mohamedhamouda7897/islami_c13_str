@@ -45,14 +45,12 @@ class _RadioTabState extends State<RadioTab> {
                     currentIndex += 1;
                   }
                 });
-                print('currentIndex: $currentIndex');
-                print('switched to: $index');
               },
             ),
             const SizedBox(
               height: 24,
             ),
-            currentIndex == 1 ? const RecitersContainer() : const RadioContainer(),
+            currentIndex == 1 ?  RecitersContainer() :  RadioContainer(),
           ],
         ),
       ),

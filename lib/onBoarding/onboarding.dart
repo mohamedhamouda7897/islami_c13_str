@@ -58,7 +58,7 @@ class OnboardingScreen extends StatelessWidget {
         PageViewModel(
           title: "Welcome To Islmi App",
           bodyWidget: const SizedBox(),
-          image: Container(child: Image.asset("assets/images/on1.png")),
+          image: Image.asset("assets/images/on1.png"),
           decoration: pageDecoration,
         ),
         PageViewModel(
