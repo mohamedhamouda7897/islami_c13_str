@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_c13_str/models/quran_tab_model.dart';
 import 'package:islami_c13_str/my_theme_data.dart';
 
 class SuraNamesHorizontal extends StatelessWidget {
-  QuranTabModel model;
+ final QuranTabModel model;
 
-  SuraNamesHorizontal({required this.model, super.key});
+ const SuraNamesHorizontal({required this.model, super.key});
 
   @override
   Widget build(BuildContext context) {

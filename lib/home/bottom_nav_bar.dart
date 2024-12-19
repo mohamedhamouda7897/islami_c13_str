@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class BottomNavBarItem extends StatefulWidget {
-  Function callBack;
+ final Function callBack;
 
-  BottomNavBarItem({required this.callBack, super.key});
+ const BottomNavBarItem({required this.callBack, super.key});
 
   @override
   State<BottomNavBarItem> createState() => _BottomNavBarState();
@@ -49,9 +49,9 @@ class _BottomNavBarState extends State<BottomNavBarItem> {
   Widget _buildNavItem(String imageName, int index) {
     return selectedIndex == index
         ? Container(
-            padding: EdgeInsets.symmetric(vertical: 6, horizontal: 20),
+            padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 20),
             decoration: BoxDecoration(
-                color: Color(0x99202020),
+                color: const Color(0x99202020),
                 borderRadius: BorderRadius.circular(66)),
             child: ImageIcon(
               AssetImage("assets/images/$imageName.png"),
